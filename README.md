@@ -1,4 +1,4 @@
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/paperfire-elements/paperfire-html)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/PaperfireElements/paperfire-html)
 
 # \<paperfire-html\>
 
