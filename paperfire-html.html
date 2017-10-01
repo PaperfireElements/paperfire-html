@@ -51,14 +51,12 @@
                     computed: '_hasLength(html)'
                 },
                 // Firebase url to location of html in firebase
-                url: {
-                    type: String,
-                    readOnly: true
-                }
+                url: String
             }
         }
 
         _hasLength(html) {
+            console.log(html);
             return typeof html === 'string' && html.length > 0;
         }
     }
