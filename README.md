@@ -2,7 +2,7 @@
 
 # \<paperfire-html\>
 
-an element to render html from firebase
+A Polymer2 element to render html from firebase
 
 <!--
 ```

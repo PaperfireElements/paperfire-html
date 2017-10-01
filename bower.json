@@ -1,6 +1,7 @@
 {
   "name": "paperfire-html",
-  "description": "an element to render html from firebase",
+  "version": "1.0.0",
+  "description": "A Polymer2 element to render html from firebase",
   "main": "paperfire-html.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
