@@ -21,13 +21,10 @@ A Polymer2 element to render html from firebase
   id="app"
   auth-domain="paperfireelements.firebaseapp.com"
   database-url="https://paperfireelements.firebaseio.com/"
-  storage-bucket:
-  "paperfireelements.appspot.com"
+  storage-bucket="paperfireelements.appspot.com"
   api-key="AIzaSyBV90mRwJOGY7uO_RVWkchk9oUBx2E-sac"
   messagingSender-id="637337808974"></firebase-app>
-<paperfire-html html="{{html}}" loaded="{{loaded}}" url="/demo/html"></paperfire-html>
-<pre>loaded: [[loaded]]</pre>
-<pre>[[html]]</pre>
+<paperfire-html url="/demo/html"></paperfire-html>
 ```
 
 ## Install the Polymer-CLI
