@@ -1,0 +1,68 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<link rel="import" href="../polymerfire/firebase-document.html">
+<link rel="import" href="../juicy-html/juicy-html.html">
+
+<dom-module id="paperfire-html">
+  <template>
+    <style>
+            :host {
+                display: block;
+            }
+
+            .content {
+                transition: opacity 300ms;
+            }
+
+            .loaded-false {
+                opacity: 0;
+            }
+
+           
+        </style>
+        <firebase-document path="[[url]]" data="{{html}}"></firebase-document>
+        <main class$="content loaded-[[loaded]]">
+            <template is="juicy-html" html="[[html]]"></template>
+        </main>
+  </template>
+
+  <script>
+    /**
+     * `paperfire-html`
+     * an element to render html from firebase
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class PaperfireHtml extends Polymer.Element {
+      static get is() { return 'paperfire-html'; }
+      static get properties() {
+            return {
+                // String of HTML
+                html: {
+                    type: String,
+                    notify: true
+                },
+                // True if html has been loaded
+                loaded: {
+                    type: Boolean,
+                    value: false,
+                    notify: true,
+                    computed: '_hasLength(html)'
+                },
+                // Firebase url to location of html in firebase
+                url: {
+                    type: String,
+                    readOnly: true
+                }
+            }
+        }
+
+        _hasLength(html) {
+            return typeof html === 'string' && html.length > 0;
+        }
+    }
+
+    window.customElements.define(PaperfireHtml.is, PaperfireHtml);
+  </script>
+</dom-module>
